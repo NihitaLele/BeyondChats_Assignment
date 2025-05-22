@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InboxSidebar from "./InboxSidebar ";
+import InboxSidebar from "./InboxSidebar";
 import ChatWindow from "./ChatWindow";
 import AISection from "./AISection";
 
