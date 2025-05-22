@@ -15,7 +15,7 @@ const MobileLayout = () => {
         {activeSection === "ai" && <AISection />}
       </div>
 
-      <div className="flex justify-around border-t border-gray-200 py-2 bg-white shadow-inner">
+      <div className="flex justify-around border-t border-gray-200 py-2 bg-white text-gray-800 font-semibold shadow-inner">
         <button
           className={`text-sm ${activeSection === "inbox" ? "text-blue-600" : "text-gray-600"}`}
           onClick={() => setActiveSection("inbox")}
