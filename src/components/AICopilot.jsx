@@ -11,7 +11,7 @@ const AICopilot = () => {
     if (!question.trim()) return;
     setLoading(true);
     try {
-      const aiResponse = await genAIResponse(question)
+      const aiResponse = await genAIResponse(question);
       setConversation((prev) => [...prev, { q: question, a: aiResponse }]);
       setQuestion("");
     } catch (err) {
@@ -28,10 +28,11 @@ const AICopilot = () => {
   };
 
   return (
-    <div className="flex flex-col h-full justify-between px-4 py-6 bg-gradient-to-t from-[#dedfed] via-[#faf8fa] to-white">
-      <div className="space-y-6 text-sm overflow-y-auto pr-2">
+    <div className="flex flex-col h-full overflow-hidden px-4 py-6 bg-gradient-to-t from-[#dedfed] via-[#faf8fa] to-white">
+      {/* message section */}
+      <div className="flex-1 space-y-6 text-sm overflow-y-auto pr-2">
         {conversation.length === 0 ? (
-          <div className="flex-1 text-center mt-24 mx-6 sm:mt-60">
+          <div className="text-center mt-24 mx-6 sm:mt-60">
             <p className="text-2xl">🤖</p>
             <h1 className="font-bold text-gray-800">Hi, I'm Fin AI Copilot</h1>
             <p className="text-gray-400 font-semibold">
@@ -66,8 +67,8 @@ const AICopilot = () => {
         )}
       </div>
 
-      {/* Suggested Questions + Input */}
-      <div className="mt-4">
+      {/* Input Section */}
+      <div className="mt-4 shrink-0">
         <div
           className="inline-block text-gray-800 text-sm bg-white rounded-lg px-2 py-1 mb-2 cursor-pointer"
           onClick={() => setQuestion("How do I get a refund?")}
@@ -83,7 +84,7 @@ const AICopilot = () => {
           price of the plan?
         </div>
 
-        <div className="flex justify-between bg-white rounded-lg px-2 py-3">
+        <div className="flex justify-between bg-white rounded-lg px-2 py-3 shadow-sm">
           <textarea
             placeholder="Ask a question..."
             className="w-full h-[20px] text-gray-800 text-sm outline-none resize-none overflow-hidden whitespace-pre-wrap"

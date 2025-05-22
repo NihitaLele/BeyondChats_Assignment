@@ -9,7 +9,7 @@ const AISection = () => {
   const [activeTab, setActiveTab] = useState("copilot");
 
   return (
-   <div className="w-full h-full flex flex-col border-l-2 border-gray-100 bg-gradient-to-br">
+<div className="w-full h-full flex flex-col overflow-hidden border-l-2 border-gray-100 bg-gradient-to-br">
 
       {/* Main header section*/}
       <div className="flex justify-between border-b-3 border-gray-100 px-7 pt-4">
@@ -51,7 +51,7 @@ const AISection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.25 }}
-              className="w-full h-full flex flex-col"
+              className=" w-full h-full"
             >
               <AICopilot />
             </motion.div>
