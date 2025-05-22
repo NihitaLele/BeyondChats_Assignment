@@ -3,7 +3,7 @@
 This project is a modern, responsive customer support chat interface with integrated AI assistance. It simulates a real-time messaging system and includes features such as a multi-pane layout, AI Copilot, chat history, and contextual conversation management—ideal for enterprise support environments.
 
  ## Live Demo 
-
+https://beyond-chats-assignment-blue.vercel.app/
 
 ## Technologies Used
 • React.js – Component-based UI development
